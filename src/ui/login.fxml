@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="accountTextField" focusColor="#101010" layoutX="175.0" layoutY="125.0" prefHeight="23.0" prefWidth="250.0" promptText="  账号" unFocusColor="#646464">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="175.0" layoutY="247.0" onAction="#onLoginButtonClick" prefHeight="36.0" prefWidth="250.0" ripplerFill="#a49f9f" style="-fx-background-color: #5264AE; -fx-text-fill: WHITE;" stylesheets="@../css/jfoenix-main-demo.css" text="登   录" textFill="#3c2c2c" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="passwordField" focusColor="#101010" layoutX="175.0" layoutY="177.0" prefHeight="23.0" prefWidth="250.0" promptText="  密码" unFocusColor="#646464">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="forgetButton" layoutX="535.0" layoutY="362.0" onAction="#onForgetButtonClick" prefHeight="23.0" text="退出" />
+            <JFXButton fx:id="registerButton1" layoutX="463.0" layoutY="362.0" onAction="#onRegisterButtonClick" prefHeight="23.0" text="注册用户" />
+            <JFXCheckBox fx:id="box" layoutX="259.0" layoutY="315.0" text="管理员" textFill="#5c5c5e">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+   </center>
+</BorderPane>

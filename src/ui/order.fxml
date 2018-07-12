@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.OrderController">
+   <center>
+      <JFXTabPane stylesheets="@../css/jfoenix-components.css" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="  首 页  ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="407.0" prefWidth="700.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="700.0" style="-fx-background-color: WHITE;">
+                                 <children>
+                                    <JFXComboBox fx:id="startComboBox" editable="true" promptText="出发城市">
+                                       <opaqueInsets>
+                                          <Insets left="20.0" />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXComboBox fx:id="endComboBox" editable="true" promptText="达到城市">
+                                       <opaqueInsets>
+                                          <Insets left="20.0" />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXDatePicker fx:id="dateTextField" promptText="日期选择">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXDatePicker>
+                                    <JFXButton fx:id="searchButton" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="80.0" text="搜索">
+                                       <HBox.margin>
+                                          <Insets left="70.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXListView fx:id="jfxListView" maxHeight="369.0" maxWidth="700.0" minHeight="369.0" minWidth="700.0" prefHeight="369.0" prefWidth="700.0" stylesheets="@../css/listview.css" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text=" 订 单 ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXListView fx:id="jfxListView1" layoutY="10.0" maxHeight="405.0" maxWidth="700.0" minHeight="405.0" minWidth="700.0" prefHeight="405.0" prefWidth="700.0" stylesheets="@../css/listview1.css" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="我的">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="l1" layoutX="281.0" layoutY="14.0" prefHeight="42.0" text="name ： yanhao">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="l2" layoutX="235.0" layoutY="47.0" prefHeight="42.0" text="iden : 40000000000000000">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="l3" layoutX="274.0" layoutY="83.0" prefHeight="42.0" text="tel：13545284308">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="name" layoutX="158.0" layoutY="171.0" promptText="name . . ." />
+                        <JFXTextField fx:id="iden" layoutX="344.0" layoutY="171.0" promptText="iden . . ." />
+                        <JFXButton fx:id="addUser" layoutX="543.0" layoutY="163.0" onAction="#onAddUserClick" style="-fx-background-color: #6e6b6b;" text="添加" textFill="#fffcfc" />
+                        <JFXChipView fx:id="chipView" layoutX="50.0" layoutY="205.0" prefHeight="200.0" prefWidth="600.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+   <top>
+      <HBox prefHeight="61.0" prefWidth="700.0" style="-fx-background-color: #575757;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="61.0" prefWidth="179.0" text="      机票预订系统" textFill="#f8f7f7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="20.0" right="20.0" />
+               </opaqueInsets>
+            </Label>
+            <JFXButton fx:id="close" onAction="#onCloseClick" text="退出" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="460.0" top="16.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children></HBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,11 @@
+.jfx-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: black;
+    -fx-font-size: 15;
+}
+.list-cell:selected{
+    -fx-background-color:white;
+}
+
+.list-cell:empty{
+    -fx-background-color:white;
+}
