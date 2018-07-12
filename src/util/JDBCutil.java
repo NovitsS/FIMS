@@ -3,8 +3,8 @@ import java.sql.*;
 
 public class JDBCutil {
     private static final String url="jdbc:mysql://localhost:3306/FIMS";
-    private static final String user="root";
-    private static final String password="Mysql703novit";
+    private static final String user=****;
+    private static final String password=*****;
 
     static{
         try{
